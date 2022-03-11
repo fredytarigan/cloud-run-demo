@@ -1,0 +1,12 @@
+version: '3'
+
+services:
+  web:
+    container_name: demo
+    build:
+      context: ./
+      dockerfile: build/Dockerfile
+    ports:
+      - 8081:80
+    environment:
+      CI_ENVIRONMENT: dev
